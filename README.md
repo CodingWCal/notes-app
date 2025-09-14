@@ -5,12 +5,14 @@ A modern, responsive note-taking application built with Next.js and Supabase mod
 ## 🚀 Quick Start
 
 ### Setup
-```bash
-+# 1. Install dependencies
-+# npm install
 
++# 1. Install dependencies
+```bash
++# npm install
+```
 +# 2. Environment
 Create .env.local with Supabase credentials
+```bash
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
@@ -21,10 +23,11 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 npm run dev
 ```
 ### Scripts
+```bash
 npm run dev     (start dev server)
 npm run build   (production build)
 npm run start   (run production build locally)
-
+```
 
 ## 🛠 Tech Stack
 - **Frontend**: Next.js 14, TypeScript
@@ -99,5 +102,4 @@ notes-app/
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📝 License
-MIT
+## 📝 License: MIT
