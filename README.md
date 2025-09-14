@@ -1,30 +1,6 @@
-# Notes App
+# 📝 Notes App
 
 A modern, responsive note-taking application built with Next.js and Supabase modeled after Google Keep.
-
-## 🚀 Quick Start
-
-### Setup
-```bash
-+# 1. Install dependencies
-+# npm install
-
-+# 2. Environment
-Create .env.local with Supabase credentials
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### Development
-```bash
-# Run local development server
-npm run dev
-```
-### Scripts
-npm run dev     (start dev server)
-npm run build   (production build)
-npm run start   (run production build locally)
-
 
 ## 🛠 Tech Stack
 - **Frontend**: Next.js 14, TypeScript
@@ -77,6 +53,33 @@ notes-app/
 4. Configure environment variables
 5. Run `npm run dev`
 
+## 🚀 Quick Start
+
+### Setup
+
+## 1. Install dependencies
+```bash
+ npm install
+```
+## 2. Environment
+Create .env.local with Supabase credentials
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### Development
+Run local development server
+```bash
+npm run dev
+```
+### Scripts
+```bash
+npm run dev     (start dev server)
+npm run build   (production build)
+npm run start   (run production build locally)
+```
+
 ## 🔧 Troubleshooting
 - 400 Bad Request on insert/update
     Make sure your Supabase table has all columns used by the app (color, pinned, etc.). The payload must match column names.
@@ -99,5 +102,4 @@ notes-app/
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📝 License
-MIT
+## 📝 License: MIT
