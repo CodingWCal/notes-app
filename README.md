@@ -57,11 +57,11 @@ notes-app/
 
 ### Setup
 
-## 1. Install dependencies
+### 1. Install dependencies
 ```bash
  npm install
 ```
-## 2. Environment
+### 2. Environment
 Create .env.local with Supabase credentials
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
