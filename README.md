@@ -2,6 +2,8 @@
 
 A modern, responsive note-taking application built with Next.js and Supabase modeled after Google Keep.
 
+[![Live on Vercel](https://img.shields.io/badge/Live-Vercel-success)](https://notes-app-eight-brown.vercel.app/)
+
 ## 🛠 Tech Stack
 - **Frontend**: Next.js 14, TypeScript
 - **Styling**: Tailwind CSS, shadcn/ui
