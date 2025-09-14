@@ -8,7 +8,7 @@ A modern, responsive note-taking application built with Next.js and Supabase mod
 
 +# 1. Install dependencies
 ```bash
-+# npm install
+ npm install
 ```
 +# 2. Environment
 Create .env.local with Supabase credentials
@@ -18,8 +18,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 ### Development
+Run local development server
 ```bash
-# Run local development server
 npm run dev
 ```
 ### Scripts
