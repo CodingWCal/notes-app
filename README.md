@@ -1,33 +1,6 @@
-# Notes App
+# 📝 Notes App
 
 A modern, responsive note-taking application built with Next.js and Supabase modeled after Google Keep.
-
-## 🚀 Quick Start
-
-### Setup
-
-## 1. Install dependencies
-```bash
- npm install
-```
-## 2. Environment
-Create .env.local with Supabase credentials
-```bash
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### Development
-Run local development server
-```bash
-npm run dev
-```
-### Scripts
-```bash
-npm run dev     (start dev server)
-npm run build   (production build)
-npm run start   (run production build locally)
-```
 
 ## 🛠 Tech Stack
 - **Frontend**: Next.js 14, TypeScript
@@ -79,6 +52,33 @@ notes-app/
 3. Set up Supabase project
 4. Configure environment variables
 5. Run `npm run dev`
+
+## 🚀 Quick Start
+
+### Setup
+
+## 1. Install dependencies
+```bash
+ npm install
+```
+## 2. Environment
+Create .env.local with Supabase credentials
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### Development
+Run local development server
+```bash
+npm run dev
+```
+### Scripts
+```bash
+npm run dev     (start dev server)
+npm run build   (production build)
+npm run start   (run production build locally)
+```
 
 ## 🔧 Troubleshooting
 - 400 Bad Request on insert/update
