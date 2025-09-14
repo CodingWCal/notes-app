@@ -4,6 +4,16 @@ A modern, responsive note-taking application built with Next.js and Supabase mod
 
 [![Live on Vercel](https://img.shields.io/badge/Live-Vercel-success)](https://notes-app-eight-brown.vercel.app/)
 
+<p align="center">
+  <img src="https://github.com/CodingWCal/notes-app/blob/main/Screenshot%202025-09-14%20120519.png" width="450" alt="Notes App Home"/>
+  <br/><em>Notes Page with Pins</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/CodingWCal/notes-app/blob/main/Screenshot%202025-09-14%20120612.png" width="450" alt="Edit Note"/>
+  <br/><em>Edit Notes Page</em>
+</p>
+
 ## 🛠 Tech Stack
 - **Frontend**: Next.js 14, TypeScript
 - **Styling**: Tailwind CSS, shadcn/ui
