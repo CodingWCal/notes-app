@@ -9,6 +9,8 @@ A modern, responsive note-taking application built with Next.js and Supabase mod
 - **State Management**: React Hooks
 - **Deployment**: Vercel
 
+Used Cursor as a pair-programmer for refactors and multi-file edits; all logic and integrations were implemented, reviewed, and tested by me. Initial UI was drafted with V0, then customized.
+
 ## ✨ Features
 
 ### Core Functionality
