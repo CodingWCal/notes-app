@@ -11,6 +11,17 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from "@/components/ui/alert-dialog"
 import { Badge } from "@/components/ui/badge"
 import { ColorSwatch } from "@/components/ColorSwatch"
 import { updateNote, deleteNote, type Note } from "@/lib/supabase"
@@ -128,10 +139,10 @@ export function NoteCard({ note, onEdit, onUpdate, onDelete }: NoteCardProps) {
                 <Pin className="h-3 w-3" />
               </Badge>
             )}
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
               <DropdownMenu>
               <DropdownMenuTrigger asChild onClick={(e) => e.stopPropagation()}>
-                <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                <Button variant="ghost" size="sm" className="h-8 w-8 p-0" aria-label="More actions">
                   <MoreVertical className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -197,6 +208,25 @@ export function NoteCard({ note, onEdit, onUpdate, onDelete }: NoteCardProps) {
         {/* Footer with date */}
         <div className="flex items-center justify-between mt-3 pt-2 border-t border-border/50">
           <span className="text-xs text-muted-foreground">{formatDate(note.created_at)}</span>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="ghost" size="sm" aria-label="Delete note" onClick={(e) => e.stopPropagation()}>
+                <Trash2 className="h-4 w-4" />
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Delete note?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={handleDelete}>Delete</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
 
         {/* Color Picker */}

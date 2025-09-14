@@ -1,11 +1,22 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Save, Pin, Palette } from "lucide-react"
+import { Save, Pin, Palette, Trash2 } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from "@/components/ui/alert-dialog"
 import { ColorSwatch } from "@/components/ColorSwatch"
 import { updateNote, type Note } from "@/lib/supabase"
 import { useToast } from "@/hooks/use-toast"
@@ -15,9 +26,10 @@ interface NoteEditorDialogProps {
   open: boolean
   onOpenChange: (open: boolean) => void
   onSave: (note: Note) => void
+  onDelete?: (id: string) => void
 }
 
-export function NoteEditorDialog({ note, open, onOpenChange, onSave }: NoteEditorDialogProps) {
+export function NoteEditorDialog({ note, open, onOpenChange, onSave, onDelete }: NoteEditorDialogProps) {
   const [title, setTitle] = useState("")
   const [content, setContent] = useState("")
   const [color, setColor] = useState("")
@@ -132,6 +144,32 @@ export function NoteEditorDialog({ note, open, onOpenChange, onSave }: NoteEdito
                 </div>
               )}
             </div>
+
+            {onDelete && note?.id && (
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-2">
+                    <Trash2 className="h-4 w-4" />
+                    Delete
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Delete note?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      This action cannot be undone.
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={() => {
+                      onDelete(note.id)
+                      onOpenChange(false)
+                    }}>Delete</AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            )}
           </div>
 
           <Button onClick={handleSave} className="gap-2">

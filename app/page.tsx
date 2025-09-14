@@ -271,6 +271,7 @@ export default function NotesPage() {
         open={!!editingNote}
         onOpenChange={(open) => !open && setEditingNote(null)}
         onSave={handleNoteUpdate}
+        onDelete={handleNoteDelete}
       />
     </div>
   );
